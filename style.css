@@ -1,0 +1,238 @@
+/* Variables */
+:root {
+  --primary-color: #4A90E2;
+  --primary-dark: #357ABD;
+  --secondary-color: #6c5ce7;
+  --secondary-dark: #4b3ba8;
+  --text-color: #2C3E50;
+  --bg-gradient: linear-gradient(180deg, #2c3e50 0%, #1c2833 100%);
+  --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 7px 14px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
+  --transition: all 0.2s ease;
+  --border-radius: 8px;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+body {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+/* Sidebar */
+[data-testid="stSidebar"] {
+  background: var(--bg-gradient);
+  color: #fff;
+  padding: 2rem 0rem;
+  box-shadow: var(--shadow-sm);
+  position: fixed;
+  width: 250px;
+  height: 100vh;
+  overflow-y: auto;
+  transform: translateX(0);
+  transition: var(--transition);
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+[data-testid="stSidebar"]::-webkit-scrollbar {
+    display: none;
+}
+
+[data-testid="stSidebar"]::before {
+  content: url(https://www.jaguarlandrover.com/themes/custom/jlr_corporate_2024/images/footer/corporate-logo-white.svg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+  width: 250px;
+  height: auto;
+  transform: scale(1.8);
+  transform-origin: center;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+/* Navigation */
+[data-testid="stSidebar"] .css-1d391kg {
+  font-size: 1rem;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  margin: 0.2rem 0;
+  border-radius: var(--border-radius);
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+[data-testid="stSidebar"] .css-1d391kg:hover,
+[data-testid="stSidebar"] .css-1d391kg.active {
+  background-color: var(--secondary-color);
+}
+
+/* Sections and Headers */
+[data-testid="stSidebar"] .css-1v0mbdj {
+  padding-top: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 1rem;
+}
+
+[data-testid="stSidebar"] h2 {
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+}
+
+/* Cards */
+div.css-1r6slb0.e1tzin5v2 {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  border-left: 0.5rem solid var(--primary-color);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  margin-bottom: 1rem;
+}
+
+div.css-1r6slb0.e1tzin5v2:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Metrics */
+div.stMetric {
+  background-color: #f8f9fa;
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  border: 1px solid #e9ecef;
+  display: grid;
+  justify-content: center;
+  transition: var(--transition);
+}
+
+div.stMetric:hover {
+  background-color: #fff;
+  box-shadow: var(--shadow-sm);
+  transform: translateY(-2px);
+}
+
+/* Typography */
+label.css-mkogse.e16fv1kl2 {
+  color: var(--text-color);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 0.875rem;
+}
+
+/* Layout */
+div.block-container.css-18e3th9.egzxvld2 {
+  margin: -3em auto 0;
+  padding: 2rem;
+  max-width: 1200px;
+}
+
+/* Hide Elements */
+div.css-r698ls.e8zbici2,
+footer.css-ipbk5a.egzxvld4,
+footer.css-12gp8ed.eknhn3m4,
+div.vg-tooltip-element {
+  display: none;
+}
+
+/* Forms */
+.stSelectbox, 
+.stTextInput {
+  border-radius: var(--border-radius);
+  border: 1px solid #e0e0e0;
+  padding: 0.5rem;
+}
+
+/* Buttons */
+.stButton>button {
+  background-color: #3E5060;
+  color: white;
+  border: 1px solid #293B4B;
+  border-radius: 8px;
+  padding: 10px 20px;
+  margin: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.stButton>button:hover {
+  background-color: #2C3E50;
+  transform: scale(1.05);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  [data-testid="stSidebar"] {
+    width: 200px;
+  }
+  
+  div.block-container.css-18e3th9.egzxvld2 {
+    padding: 1rem;
+  }
+}
+
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(-20px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+.title-container {
+  padding: 25px;
+  text-align: center;
+  animation: fadeIn 0.8s ease-out;
+}
+
+.title-container h1 {
+  color: white;
+  padding-top: -100rem;
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.sidebar-footer {
+  
+  bottom: 0;
+  left: 0;
+  width: 300px;
+  background-color: #202d3a;
+  padding: 15px;
+  text-align: center;
+  border-top: 1px solid #FFFFFF;
+}
+
+.footer-text {
+  color: #FFFFFF;
+  font-size: 12px;
+  margin: 0;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.footer-links a {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-links a:hover {
+  color: #FFFFFF;
+}

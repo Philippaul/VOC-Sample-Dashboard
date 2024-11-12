@@ -1,0 +1,45 @@
+###Loti animation
+
+
+def load_lottieurl(url: str):
+    r = requests.get(url)
+    if r.status_code != 200:
+        return None
+    return r.json()
+
+
+lottie_url_hello = "https://assets5.lottiefiles.com/packages/lf20_V9t630.json"
+lottie_url_download = "https://assets4.lottiefiles.com/private_files/lf30_t26law.json"
+lottie_hello = load_lottieurl(lottie_url_hello)
+lottie_download = load_lottieurl(lottie_url_download)
+
+
+st_lottie(lottie_hello, key="hello")
+
+if st.button("Download"):
+    with st_lottie_spinner(lottie_download, key="download"):
+        time.sleep(5)
+    st.balloons()
+
+### Heat map
+
+st.markdown('### Heatmap')
+        plost.time_hist(
+            data=seattle_weather,
+            date='date',
+            x_unit='week',
+            y_unit='day',
+            color='temp_min',  # you can use time_hist_color if required
+            aggregate='median',
+            legend=None,
+            height=345,
+            use_container_width=True
+        )
+
+
+### Heatmap sidebar
+    st.sidebar.subheader('Heat map parameter')
+    time_hist_color = st.sidebar.selectbox('Color by', ('temp_min', 'temp_max'), key="time_hist_color")
+
+
+
