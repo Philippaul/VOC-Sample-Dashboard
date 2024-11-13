@@ -1,5 +1,4 @@
 snowflake-connector-python==3.12.3
-snowflake-snowpark-python==1.24.0  # or the latest compatible version
 snowflake-uuid
 streamlit
 pandas
