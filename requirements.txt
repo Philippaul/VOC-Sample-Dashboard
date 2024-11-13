@@ -1,3 +1,7 @@
+snowflake
 streamlit
 pandas
 plost
+plotly
+matplotlib
+numpy
