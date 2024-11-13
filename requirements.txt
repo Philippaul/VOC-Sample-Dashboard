@@ -1,5 +1,8 @@
 snowflake
+snowflake_uuid
 streamlit
+snowflake-connector-python
+snowflake-snowpark-python
 pandas
 plost
 plotly
